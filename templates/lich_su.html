@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Demo Lịch Sử Đăng Ký</title>
+    <meta charset="UTF-8">
+    <!-- Thêm một chút CSS đơn giản để dễ nhìn -->
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            padding: 20px; 
+            background-color: #f0f2f5; 
+            color: #333;
+        }
+        h1 { 
+            color: #004a99; 
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .event-card { 
+            border: 1px solid #ddd; 
+            background: #ffffff; 
+            padding: 15px; 
+            margin-bottom: 10px; 
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-left: 5px solid #007bff;
+        }
+        .event-card h3 { 
+            margin-top: 0; 
+            color: #004a99; 
+        }
+        .event-card p {
+            margin: 5px 0;
+        }
+        .no-events { 
+            color: #777; 
+            font-style: italic; 
+            font-size: 1.1em;
+            margin-top: 20px;
+        }
+        .back-link { 
+            display: inline-block; 
+            margin-top: 20px; 
+            text-decoration: none; 
+            color: #0056b3;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .status {
+            color: green; 
+            font-weight: bold;
+            margin-top: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lịch sử đăng ký của bạn</h1>
+    <p>Đây là danh sách các sự kiện mà User ID <strong>{{ session.id }} ({{ session.email }})</strong> đã đăng ký.</p>
+
+    <!-- 
+      Đây là cách FE (HTML) sử dụng biến 'registered_events'
+      mà API (Python) đã gửi sang.
+    -->
+
+    <!-- Bắt đầu vòng lặp Jinja2 -->
+    {% for event in registered_events %}
+        
+        <!-- Hiển thị thông tin của từng sự kiện -->
+        <div class="event-card">
+            <h3>{{ event.chu_de }}</h3>
+            <p><strong>Cơ sở:</strong> {{ event.co_so }}</p>
+            <p>
+                <strong>Thời gian:</strong> 
+                {{ event.ngay_dien_ra }} (Từ {{ event.thoi_gian_bat_dau }} 
+                đến {{ event.thoi_gian_ket_thuc }})
+            </p>
+            <span class="status">(Đã đăng ký)</span>
+        </div>
+
+    <!-- 
+      Khối 'else' này sẽ tự động hiển thị 
+      nếu danh sách 'registered_events' bị rỗng.
+    -->
+    {% else %}
+        <p class="no-events">Bạn chưa đăng ký sự kiện nào.</p>
+    
+    {% endfor %} <!-- Kết thúc vòng lặp -->
+
+    <a href="/" class="back-link">&laquo; Quay lại trang chủ Demo</a>
+
+</body>
+</html>
+
