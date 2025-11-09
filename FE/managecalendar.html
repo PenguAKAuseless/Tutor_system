@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Lịch hẹn</title>
+    <link rel="stylesheet" href="managecalendar.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">LOGO BK</div>
+        <nav class="main-nav">
+            <a href="#">Trang chủ</a>
+            <a href="#">Sự kiện</a>
+            <a href="#">Tìm kiếm</a>
+            <a href="#">Tài liệu</a>
+            <a href="#">Hỗ trợ</a>
+        </nav>
+        <div class="auth-buttons">
+            <button class="btn-secondary">Đăng kí</button>
+            <button class="btn-primary">Đăng nhập</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Tabs Navigation -->
+        <div class="tabs">
+            <button class="tab-link active" onclick="openTab(event, 'doiLichContent')">ĐỔI LỊCH</button>
+            <button class="tab-link" onclick="openTab(event, 'huyLichContent')">HUỶ LỊCH</button>
+        </div>
+
+        <!-- Tab Content 1: Reschedule/Book Form (Đổi Lịch) -->
+        <div id="doiLichContent" class="tab-content active">
+            <div class="form-container">
+                <h2>THÔNG TIN</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="support-need">NHU CẦU HỖ TRỢ</label>
+                        <select id="support-need">
+                            <option>Tư vấn tâm lý</option>
+                            <option>Tư vấn học đường</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="facility">CƠ SỞ</label>
+                        <select id="facility">
+                            <option>Cơ sở 1</option>
+                            <option>Cơ sở 2</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">SĐT</label>
+                        <input type="tel" id="phone" placeholder="....">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">THỜI GIAN</label>
+                        <input type="date" id="date" value="2025-10-20">
+                    </div>
+                    <div class="form-group">
+                        <label for="start-time">THỜI GIAN BẮT ĐẦU</label>
+                        <input type="time" id="start-time" value="07:00">
+                    </div>
+                    <div class="form-group">
+                        <label for="end-time">THỜI GIAN KẾT THÚC</label>
+                        <input type="time" id="end-time" value="08:00">
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button class="btn-submit">CẬP NHẬT</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Content 2: Cancel List (Hủy Lịch) -->
+        <div id="huyLichContent" class="tab-content">
+            <h2 class="page-heading">DANH MỤC LỊCH HẸN CỦA BẠN</h2>
+            <div class="card-container">
+                <!-- Card 1 -->
+                <div class="appointment-card">
+                    <div class="card-image-placeholder"></div>
+                    <h3>TƯ VẤN TÂM LÝ</h3>
+                    <ul>
+                        <li>20/10/2025 (01:00PM - 05:00PM)</li>
+                        <li>Cơ sở 1</li>
+                    </ul>
+                    <div class="card-footer">
+                        <div class="slots-info">
+                            <span class="slots-indicator"></span>
+                            <span>15/20 SLOTS</span>
+                        </div>
+                        <button class="btn-cancel">Huỷ Lịch</button>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="appointment-card">
+                    <div class="card-image-placeholder"></div>
+                    <h3>TƯ VẤN TÂM LÝ</h3>
+                    <ul>
+                        <li>22/10/2025 (09:00AM - 10:00AM)</li>
+                        <li>Cơ sở 2</li>
+                    </ul>
+                    <div class="card-footer">
+                        <div class="slots-info">
+                            <span class="slots-indicator"></span>
+                            <span>18/20 SLOTS</span>
+                        </div>
+                        <button class="btn-cancel">Huỷ Lịch</button>
+                    </div>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Tab functionality -->
+    <script>
+        function openTab(evt, tabName) {
+            // Get all elements with class="tab-content" and hide them
+            var tabcontent = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tab-link" and remove the class "active"
+            var tablinks = document.getElementsByClassName("tab-link");
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+</body>
+
+</html>

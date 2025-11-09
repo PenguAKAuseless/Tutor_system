@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin người dùng</title>
+    <!-- Import Font Awesome for icons -->
+    <link rel="stylesheet" href="useraccount.css">
+</head>
+
+<body>
+
+    <!-- --- Header / Navbar --- -->
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo">
+                <span class="logo-circle">BK</span>
+                TPHCM
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Sự kiện</a></li>
+                <li><a href="#">Tìm kiếm</a></li>
+                <li><a href="#">Tài liệu</a></li>
+                <li><a href="#">Hỗ trợ</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="nav-icon">
+                <i class="fas fa-bell"></i>
+            </div>
+            <div class="nav-icon">
+                <i class="fas fa-user"></i>
+                <span>Người dùng</span>
+            </div>
+            <div class="nav-icon">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- --- Main Content --- -->
+    <main class="container">
+
+        <!-- --- Profile Section --- -->
+        <section class="card profile-section">
+            <h2>Thông tin cá nhân</h2>
+            <div class="profile-content">
+                <div class="profile-picture">
+                    <!-- Using 'fa-image' as seen in the screenshot -->
+                    <i class="fas fa-image placeholder-icon"></i>
+                </div>
+
+                <div class="profile-details">
+                    <!-- Row 1 -->
+                    <div class="detail-item gc-2">
+                        <span class="label">Mã số sinh viên</span>
+                        <span class="value">1234567</span>
+                    </div>
+                    <div class="detail-item gc-2">
+                        <span class="label">Họ và tên</span>
+                        <span class="value">Nguyễn Đức A</span>
+                    </div>
+                    <div class="detail-item gc-2">
+                        <span class="label">Ngày sinh</span>
+                        <span class="value">30/2/2025</span>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="detail-item gc-2">
+                        <span class="label">Giới tính</span>
+                        <span class="value">Nam</span>
+                    </div>
+                    <div class="detail-item gc-3"> <!-- Span 3 to match image layout -->
+                        <span class="label">Email</span>
+                        <span class="value">abc.xyz@hcmut.edu.vn</span>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="detail-item gc-6">
+                        <span class="label">Khoa</span>
+                        <span class="value">Khoa học và kĩ thuật máy tính</span>
+                    </div>
+
+                    <!-- Row 4 -->
+                    <div class="detail-item gc-6">
+                        <span class="label">Nhu cầu hỗ trợ</span>
+                        <span class="value">Định hướng phát triển nghề nghiệp</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- Calendar Section --- -->
+        <section class="card calendar-section">
+            <h2 class="section-title-bar">Lịch của tôi</h2>
+            <div class="calendar-body">
+                <h3>Tháng 3</h3>
+                <div class="calendar-grid">
+                    <!-- Day Headers -->
+                    <div class="day-header">CN</div>
+                    <div class="day-header">T2</div>
+                    <div class="day-header">T3</div>
+                    <div class="day-header">T4</div>
+                    <div class="day-header">T5</div>
+                    <div class="day-header">T6</div>
+                    <div class="day-header">T7</div>
+
+                    <!-- Row 1 -->
+                    <div class="day-cell empty"></div>
+                    <div class="day-cell empty"></div>
+                    <div class="day-cell">1</div>
+                    <div class="day-cell">2</div>
+                    <div class="day-cell">3</div>
+                    <div class="day-cell">4</div>
+                    <div class="day-cell">5</div>
+
+                    <!-- Row 2 -->
+                    <div class="day-cell highlight">6</div>
+                    <div class="day-cell">7</div>
+                    <div class="day-cell">8</div>
+                    <div class="day-cell">9</div>
+                    <div class="day-cell">10</div>
+                    <div class="day-cell">11</div>
+                    <div class="day-cell">12</div>
+
+                    <!-- Row 3 -->
+                    <div class="day-cell">13</div>
+                    <div class="day-cell highlight">14</div>
+                    <div class="day-cell">15</div>
+                    <div class="day-cell">16</div>
+                    <div class="day-cell">17</div>
+                    <div class="day-cell">18</div>
+                    <div class="day-cell highlight">19</div>
+
+                    <!-- Row 4 -->
+                    <div class="day-cell">20</div>
+                    <div class="day-cell">21</div>
+                    <div class="day-cell">22</div>
+                    <div class="day-cell highlight">23</div>
+                    <div class="day-cell">24</div>
+                    <div class="day-cell">25</div>
+                    <div class="day-cell">26</div>
+
+                    <!-- Row 5 -->
+                    <div class="day-cell highlight">27</div>
+                    <div class="day-cell">28</div>
+                    <div class="day-cell">29</div>
+                    <div class="day-cell">30</div>
+                    <div class="day-cell">31</div>
+                    <div class="day-cell empty"></div>
+                    <div class="day-cell empty"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

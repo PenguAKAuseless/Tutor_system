@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trường Đại học Bách Khoa</title>
+
+    <!-- Link to the new CSS file -->
+    <link rel="stylesheet" href="home.css">
+
+    <!-- Import Lucide icons -->
+    <script src="https://unpkg.com/lucide-react@latest/dist/umd/lucide.js"></script>
+
+    <!-- Use Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Removed inline <style> and Tailwind script -->
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar container">
+            <!-- Logo -->
+            <div class="logo">
+                <div class="logo-icon">
+                    BK
+                </div>
+                <span class="logo-text">ĐH BÁCH KHOA</span>
+            </div>
+
+            <!-- Navigation Links (Desktop) -->
+            <div class="nav-links">
+                <a href="#">TRANG CHỦ</a>
+                <a href="#">SỰ KIỆN</a>
+                <a href="#">THƯ VIỆN</a>
+                <a href="#">TÀI LIỆU</a>
+                <a href="#">HỖ TRỢ</a>
+            </div>
+
+            <!-- Auth Buttons (Desktop) -->
+            <div class="auth-buttons">
+                <a href="#" class="login-link">ĐĂNG NHẬP</a>
+                <a href="#" class="register-button">
+                    ĐĂNG KÝ
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-button">
+                <button id="mobile-menu-button" aria-label="Open menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="#">TRANG CHỦ</a>
+            <a href="#">SỰ KIỆN</a>
+            <a href="#">THƯ VIỆN</a>
+            <a href="#">TÀI LIỆU</a>
+            <a href="#">HỖ TRỢ</a>
+            <hr>
+            <a href="#" class="login-link">ĐĂNG NHẬP</a>
+            <a href="#" class="register-button">
+                ĐĂNG KÝ
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero"
+            style="background-image: url('https://placehold.co/1600x900/003A70/FFFFFF?text=University+Campus');">
+            <!-- Overlay -->
+            <div class="hero-overlay"></div>
+
+            <!-- Hero Text -->
+            <div class="hero-content container">
+                <h1>
+                    Trải nghiệm sự học tập tiện lợi tại HCMUT
+                </h1>
+            </div>
+        </section>
+
+        <!-- Section 1: Features -->
+        <section class="features-section">
+            <div class="container">
+                <div class="features-grid">
+                    <!-- Text Content -->
+                    <div class="features-text">
+                        <h2>
+                            HỆ THỐNG QUẢN LÝ TUTORS/MENTORS VÀ SINH VIÊN TỰ ĐỘNG
+                        </h2>
+                        <p>
+                            Hệ thống Thông Minh được thiết kế để kết nối, tương tác và hỗ trợ sinh viên trong suốt quá
+                            trình học tập. Với các tính năng như Chatbot AI, Voicebot AI, và hệ thống Hỗ trợ Học Tập,
+                            các bạn sinh viên sẽ được quản lý tự động, dễ dàng tiếp cận và nhận được sự hỗ trợ cần
+                            thiết.
+                        </p>
+                    </div>
+                    <!-- Image -->
+                    <div class="features-image">
+                        <img src="https://placehold.co/600x400/EEEEEE/AAAAAA?text=Modern+Study+Area"
+                            alt="Khu vực học tập" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: CTA -->
+        <section class="cta-section"
+            style="background-image: url('https://placehold.co/1600x400/333333/FFFFFF?text=Blurred+Library');">
+            <!-- Overlay -->
+            <div class="cta-overlay"></div>
+
+            <!-- Dark bars -->
+            <div class="cta-bar-top"></div>
+            <div class="cta-bar-bottom"></div>
+
+            <!-- Text -->
+            <div class="cta-content container">
+                <h2>
+                    Đăng ký sự kiện và đặt lịch tư vấn
+                </h2>
+            </div>
+        </section>
+
+        <!-- Section 3: Cards -->
+        <section class="cards-section">
+            <div class="container">
+                <div class="cards-grid">
+
+                    <!-- Card 1: Phòng học -->
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/CCCCCC/AAAAAA?text=Classroom" alt="Phòng học">
+                        <div class="card-content">
+                            <h3>Lớp ABC</h3>
+                            <ul>
+                                <li>Giảng viên A</li>
+                                <li>Chủ đề: AI và ứng dụng</li>
+                                <li>Thời gian: 11/11/2025</li>
+                                <li>Địa điểm: BK.B6-602</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="card-button">
+                                Xem chi tiết
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Phòng máy -->
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/CCCCCC/AAAAAA?text=Computer+Lab" alt="Phòng máy">
+                        <div class="card-content">
+                            <h3>Lớp ABC</h3>
+                            <ul>
+                                <li>Giảng viên A</li>
+                                <li>Chủ đề: AI và ứng dụng</li>
+                                <li>Thời gian: 11/11/2025</li>
+                                <li>Địa điểm: BK.B6-602</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="card-button">
+                                Xem chi tiết
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Footer Column 1: Logo & Info -->
+                <div class="footer-col-info">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            BK
+                        </div>
+                        <span class="logo-text">TRƯỜNG ĐẠI HỌC BÁCH KHOA</span>
+                    </div>
+                    <p>
+                        268 Lý Thường Kiệt, Phường Diên Hồng, TP. HCM
+                    </p>
+                    <p>
+                        (028) 38 651 670 - (028) 38 647 256
+                    </p>
+                    <!-- Social Icons -->
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        <a href="#" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Footer Column 2: Links -->
+                <div class="footer-col-links">
+                    <h4 class="footer-col-title">Contact</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Column 3: Links -->
+                <div class="footer-col-links">
+                    <h4 class="footer-col-title">Use Cases</h4>
+                    <ul>
+                        <li><a href="#">Students</a></li>
+                        <li><a href="#">Tutors</a></li>
+                        <li><a href="#">Mentors</a></li>
+                        <li><a href="#">Faculty</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Column 4: Links -->
+                <div class="footer-col-links">
+                    <h4 class="footer-col-title">Resources</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Guides</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Bar -->
+            <hr class="footer-bottom-bar">
+            <div class="footer-copyright">
+                &copy; 2025 Trường Đại học Bách Khoa. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lucide icons script -->
+    <script>
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            // Toggle an 'active' class instead of 'hidden'
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+
+</body>
+
+</html>
